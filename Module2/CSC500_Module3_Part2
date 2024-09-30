@@ -1,0 +1,14 @@
+def future_time():
+
+    # Getting the current time
+    current_time = int(input("Enter the current time using 24 hour formatting: "))
+    hours = int(input("Enter the number of hours to wait for the alarm: "))
+
+    # Calculating the alarm time11
+    # %24 ensures the time stays in the 24 hour format
+    alarm = (current_time + hours) % 24
+
+    # Output the result
+    print(f"The alarm will go off at {alarm}:00")
+
+future_time()
