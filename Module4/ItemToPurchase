@@ -1,0 +1,37 @@
+# Creating the class
+class ItemToPurchase:
+    # Creating constructor with the required attributes
+    def __init__(self, item_name="none", item_price=0.0, item_quantity=0):
+        self.item_name = item_name
+        self.item_price = item_price
+        self.item_quantity = item_quantity
+
+    def print_item_cost(self):
+        total_cost = self.item_price * self.item_quantity
+        print(f"{self.item_name} {self.item_quantity} @ ${self.item_price} = ${total_cost}")
+
+
+
+def main():
+    # Asking the user for the first item
+    print("Item 1")
+    firstItemName = input("Enter the item name: ")
+    firstItemPrice = float(input("Enter the item price: "))
+    firstItemQuantity = int(input("Enter the item quantity: "))
+    firstItem = ItemToPurchase(firstItemName, firstItemPrice, firstItemQuantity)
+    
+    # Asking the user for the second item
+    print("\nItem 2")
+    secondItemName = input("Enter the item name: ")
+    secondItemPrice = float(input("Enter the item price: "))
+    secondItemQuantity = int(input("Enter the item quantity: "))
+    secondItem = ItemToPurchase(secondItemName, secondItemPrice, secondItemQuantity)
+    
+    # Outputting and calculating the total cost
+    print("\nTOTAL COST")
+    firstItem.print_item_cost()
+    secondItem.print_item_cost()
+    total_cost = (firstItem.item_price * firstItem.item_quantity) + (secondItem.item_price * secondItem.item_quantity)
+    print(f"Total: ${total_cost}")
+    
+main ()
